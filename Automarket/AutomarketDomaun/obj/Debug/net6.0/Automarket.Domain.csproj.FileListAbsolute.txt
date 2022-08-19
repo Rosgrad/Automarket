@@ -1,0 +1,14 @@
+E:\PR\Automarket\AutomarketDomaun\bin\Debug\net6.0\Automarket.Domain.deps.json
+E:\PR\Automarket\AutomarketDomaun\bin\Debug\net6.0\Automarket.Domain.runtimeconfig.json
+E:\PR\Automarket\AutomarketDomaun\bin\Debug\net6.0\Automarket.Domain.dll
+E:\PR\Automarket\AutomarketDomaun\bin\Debug\net6.0\Automarket.Domain.pdb
+E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\Automarket.Domain.csproj.AssemblyReference.cache
+E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\Automarket.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\Automarket.Domain.AssemblyInfoInputs.cache
+E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\Automarket.Domain.AssemblyInfo.cs
+E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\Automarket.Domain.csproj.CoreCompileInputs.cache
+E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\Automarket.Domain.dll
+E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\refint\Automarket.Domain.dll
+E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\Automarket.Domain.pdb
+E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\Automarket.Domain.genruntimeconfig.cache
+E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\ref\Automarket.Domain.dll

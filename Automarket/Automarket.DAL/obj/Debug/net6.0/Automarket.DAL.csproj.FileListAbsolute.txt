@@ -1,0 +1,17 @@
+E:\PR\Automarket\Automarket.DAL\bin\Debug\net6.0\Automarket.DAL.deps.json
+E:\PR\Automarket\Automarket.DAL\bin\Debug\net6.0\Automarket.DAL.dll
+E:\PR\Automarket\Automarket.DAL\bin\Debug\net6.0\Automarket.DAL.pdb
+E:\PR\Automarket\Automarket.DAL\obj\Debug\net6.0\Automarket.DAL.csproj.AssemblyReference.cache
+E:\PR\Automarket\Automarket.DAL\obj\Debug\net6.0\Automarket.DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\PR\Automarket\Automarket.DAL\obj\Debug\net6.0\Automarket.DAL.AssemblyInfoInputs.cache
+E:\PR\Automarket\Automarket.DAL\obj\Debug\net6.0\Automarket.DAL.AssemblyInfo.cs
+E:\PR\Automarket\Automarket.DAL\obj\Debug\net6.0\Automarket.DAL.csproj.CoreCompileInputs.cache
+E:\PR\Automarket\Automarket.DAL\obj\Debug\net6.0\Automarket.DAL.csproj.CopyComplete
+E:\PR\Automarket\Automarket.DAL\obj\Debug\net6.0\Automarket.DAL.dll
+E:\PR\Automarket\Automarket.DAL\obj\Debug\net6.0\refint\Automarket.DAL.dll
+E:\PR\Automarket\Automarket.DAL\obj\Debug\net6.0\Automarket.DAL.pdb
+E:\PR\Automarket\Automarket.DAL\obj\Debug\net6.0\ref\Automarket.DAL.dll
+E:\PR\Automarket\Automarket.DAL\bin\Debug\net6.0\Automarket.DAL.runtimeconfig.json
+E:\PR\Automarket\Automarket.DAL\obj\Debug\net6.0\Automarket.DAL.genruntimeconfig.cache
+E:\PR\Automarket\Automarket.DAL\bin\Debug\net6.0\AutomarketDomaun.dll
+E:\PR\Automarket\Automarket.DAL\bin\Debug\net6.0\AutomarketDomaun.pdb
