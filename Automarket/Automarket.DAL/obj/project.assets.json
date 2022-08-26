@@ -2712,11 +2712,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\PR\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj",
+      "projectUniqueName": "E:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj",
       "projectName": "Automarket.DAL",
-      "projectPath": "E:\\PR\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj",
+      "projectPath": "E:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj",
       "packagesPath": "C:\\Users\\Амир\\.nuget\\packages\\",
-      "outputPath": "E:\\PR\\Automarket\\Automarket.DAL\\obj\\",
+      "outputPath": "E:\\Automarket\\Automarket\\Automarket.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2737,8 +2737,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\PR\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj": {
-              "projectPath": "E:\\PR\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj"
+            "E:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj": {
+              "projectPath": "E:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj"
             }
           }
         }

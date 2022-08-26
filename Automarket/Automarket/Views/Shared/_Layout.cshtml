@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>@ViewData["Title"] - CarShop</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+    <link href="https://raw.githack.com/ttskch/select2-bootstrap4-theme/master/dist/select2-bootstrap4.css" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css"/>
     <link rel="stylesheet" href="~/css/backImage.css"/>
     <link rel="stylesheet" href="~/css/menu.css"/>
     <link rel="stylesheet" href="~/css/paragraph.css"/>
     <link rel="stylesheet" href="~/css/card.css"/>
     <link rel="stylesheet" href="~/css/label.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css">
 </head>
 <body class="backgroundImage">
 <header>
@@ -54,24 +57,9 @@
                 @if (User.Identity.IsAuthenticated)
                 {
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle paragraphLayout active text-black" href="#" data-toggle="dropdown" style="font-family:'Comic Sans MS'; font-weight: bold;">
+                        <a class="nav-link paragraphLayout active text-black" asp-controller="Car" asp-action="GetCars" style="font-family:'Comic Sans MS'; font-weight: bold;">
                             Авто
                         </a>
-                        <div class="dropdown-menu">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <ul class="nav flex-column paragraphHome">
-                                            <li class="nav-item text-center">
-                                                <a class="nav-link active text-white" asp-controller="Car" asp-action="List">
-                                                    Список
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </li>   
                 }
                 @if (User.IsInRole("Admin"))
@@ -90,8 +78,8 @@
                                                     Добавление
                                                 </a>
                                             </li>
-                                            <li class="nav-item text-center">
-                                                <a class="nav-link active text-white" asp-controller="Admin" asp-action="Index">
+                                             <li class="nav-item text-center">
+                                                <a class="nav-link active text-white" asp-controller="User" asp-action="GetUsers">
                                                     Пользователи
                                                 </a>
                                             </li>
@@ -106,7 +94,13 @@
 
             @if (User.Identity.IsAuthenticated)
             {
-                 <form method="post" asp-controller="Account" asp-action="Logout">
+                <a asp-controller="Profile" asp-action="Detail">
+                    <svg style="color: black;" xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                    </svg>
+                </a>
+            
+                <form method="post" asp-controller="Account" asp-action="Logout">
                     <input class="btn btn-danger rounded" style="font-family:'Comic Sans MS'; font-weight: bold; font-size:20px;" type="submit" value="Выход" />
                 </form>
             }
@@ -118,10 +112,31 @@
         @RenderBody()
     </main>
 </div>
+
+<div class="modal fade" id="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Информация</h5>
+      </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-close btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            @if (User.IsInRole("Admin"))
+            {
+                <button type="button" class="btn btn-primary" id="saveBtn">Сохранить</button>   
+            }
+        </div>
+    </div>
+  </div>
+</div>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/lib/jquery/dist/jquery.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script src="~/js/modal.js"></script>
 @await RenderSectionAsync("pageScripts", required: false)
 </body>
 </html>

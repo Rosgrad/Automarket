@@ -12,3 +12,17 @@ E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\AutomarketDomaun.pdb
 E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\ref\AutomarketDomaun.dll
 E:\PR\Automarket\AutomarketDomaun\bin\Debug\net6.0\AutomarketDomaun.runtimeconfig.json
 E:\PR\Automarket\AutomarketDomaun\obj\Debug\net6.0\AutomarketDomaun.genruntimeconfig.cache
+E:\Automarket\Automarket\AutomarketDomaun\bin\Debug\net6.0\AutomarketDomaun.deps.json
+E:\Automarket\Automarket\AutomarketDomaun\bin\Debug\net6.0\AutomarketDomaun.runtimeconfig.json
+E:\Automarket\Automarket\AutomarketDomaun\bin\Debug\net6.0\AutomarketDomaun.dll
+E:\Automarket\Automarket\AutomarketDomaun\bin\Debug\net6.0\AutomarketDomaun.pdb
+E:\Automarket\Automarket\AutomarketDomaun\obj\Debug\net6.0\AutomarketDomaun.csproj.AssemblyReference.cache
+E:\Automarket\Automarket\AutomarketDomaun\obj\Debug\net6.0\AutomarketDomaun.GeneratedMSBuildEditorConfig.editorconfig
+E:\Automarket\Automarket\AutomarketDomaun\obj\Debug\net6.0\AutomarketDomaun.AssemblyInfoInputs.cache
+E:\Automarket\Automarket\AutomarketDomaun\obj\Debug\net6.0\AutomarketDomaun.AssemblyInfo.cs
+E:\Automarket\Automarket\AutomarketDomaun\obj\Debug\net6.0\AutomarketDomaun.csproj.CoreCompileInputs.cache
+E:\Automarket\Automarket\AutomarketDomaun\obj\Debug\net6.0\AutomarketDomaun.dll
+E:\Automarket\Automarket\AutomarketDomaun\obj\Debug\net6.0\refint\AutomarketDomaun.dll
+E:\Automarket\Automarket\AutomarketDomaun\obj\Debug\net6.0\AutomarketDomaun.pdb
+E:\Automarket\Automarket\AutomarketDomaun\obj\Debug\net6.0\AutomarketDomaun.genruntimeconfig.cache
+E:\Automarket\Automarket\AutomarketDomaun\obj\Debug\net6.0\ref\AutomarketDomaun.dll

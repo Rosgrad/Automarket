@@ -2,6 +2,7 @@
 using Automarket.Service.Interfaces;
 using AutomarketDomaun.Entity;
 using AutomarketDomaun.Enum;
+using AutomarketDomaun.Enum.Extensions;
 using AutomarketDomaun.Response;
 using AutomarketDomaun.ViewModel.Car;
 using System.Data.Entity;
@@ -10,16 +11,36 @@ namespace Automarket.Service.Implementations
 {
     public class CarService : ICarService
     {
-        private readonly ICarRepository _carRepository;
+        private readonly IBaseRepository<Car> _carRepository;
 
-        public CarService(ICarRepository carRepository)
+        public CarService(IBaseRepository<Car> carRepository)
         {
             _carRepository = carRepository;
         }
+        public BaseResponse<Dictionary<int, string>> GetTypes()
+        {
+            try
+            {
+                var types = ((TypeCar[])Enum.GetValues(typeof(TypeCar)))
+                    .ToDictionary(k => (int)k, t => t.GetDisplayName());
 
+                return new BaseResponse<Dictionary<int, string>>()
+                {
+                    Data = types,
+                    StatusCode = StatusCode.OK
+                };
+            }
+            catch (Exception ex)
+            {
+                return new BaseResponse<Dictionary<int, string>>()
+                {
+                    Descriprion = ex.Message,
+                    StatusCode = StatusCode.InternalServerError
+                };
+            }
+        }
         public async Task<IBaseResponse<CarViewModel>> GetCar(int id)
         {
-            var baseResponse = new BaseResponse<CarViewModel>();
             try
             {
                 var car = await _carRepository.GetAll().FirstOrDefaultAsync(x => x.Id == id);
@@ -34,16 +55,21 @@ namespace Automarket.Service.Implementations
 
                 var data = new CarViewModel()
                 {
-                    DataCreate = car.DataCreate,
+                    DataCreate = car.DataCreate.ToLongDateString(),
                     Description = car.Description,
-                    TypeCar = car.TypeCar.ToString(),
+                    Name = car.Name,
+                    Price = car.Price,
+                    TypeCar = car.TypeCar.GetDisplayName(),
                     Speed = car.Speed,
-                    Model = car.Model
+                    Model = car.Model,
+                    Image = car.Avatar,
                 };
 
-                baseResponse.StatusCode = StatusCode.OK;
-                baseResponse.Data = data;
-                return baseResponse;
+                return new BaseResponse<CarViewModel>()
+                {
+                    StatusCode = StatusCode.OK,
+                    Data = data
+                };
             }
             catch (Exception ex)
             {
@@ -55,33 +81,40 @@ namespace Automarket.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<CarViewModel>> CreateCar(CarViewModel carViewModel)
+
+        public async Task<IBaseResponse<Car>> CreateCar(CarViewModel model, byte[] imageData)
         {
             var baseResponse = new BaseResponse<CarViewModel>();
             try
             {
                 var car = new Car()
                 {
-                    Description = carViewModel.Description,
+                    Name = model.Name,
+                    Model = model.Model,
+                    Description = model.Description,
                     DataCreate = DateTime.Now,
-                    Speed = carViewModel.Speed,
-                    Model = carViewModel.Model,
-                    Price = carViewModel.Price,
-                    Name = carViewModel.Name,
-                    TypeCar = (TypeCar)Convert.ToInt32(carViewModel.TypeCar)
+                    Speed = model.Speed,
+                    TypeCar = (TypeCar)Convert.ToInt32(model.TypeCar),
+                    Price = model.Price,
+                    Avatar = imageData
                 };
 
                 await _carRepository.Create(car);
+                return new BaseResponse<Car>()
+                {
+                    StatusCode = StatusCode.OK,
+                    Data = car
+                };
             }
             catch (Exception ex)
             {
-                return new BaseResponse<CarViewModel>()
+                return new BaseResponse<Car>()
                 {
-                    Descriprion = $"[CreateCar] : {ex.Message}",
+                    Descriprion = $"[Create] : {ex.Message}",
                     StatusCode = StatusCode.InternalServerError
                 };
             }
-            return baseResponse;
+           
         }
 
         public async Task<IBaseResponse<bool>> DeleteCar(int id)
@@ -117,31 +150,31 @@ namespace Automarket.Service.Implementations
             }
         }
 
-        public async Task<IBaseResponse<Car>> GetCarByName(string name)
-        {
-            var baseResponse = new BaseResponse<Car>();
-            try
-            {
-                var car = await _carRepository.GetByName(name);
-                if (car == null)
-                {
-                    baseResponse.Descriprion = "User not found";
-                    baseResponse.StatusCode = StatusCode.UserNotFound;
-                    return baseResponse;
-                }
+        //public async Task<IBaseResponse<Car>> GetCarByName(string name)
+        //{
+        //    var baseResponse = new BaseResponse<Car>();
+        //    try
+        //    {
+        //        var car = await _carRepository.GetByName(name);
+        //        if (car == null)
+        //        {
+        //            baseResponse.Descriprion = "User not found";
+        //            baseResponse.StatusCode = StatusCode.UserNotFound;
+        //            return baseResponse;
+        //        }
 
-                baseResponse.Data = car;
-                return baseResponse;
-            }
-            catch (Exception ex)
-            {
-                return new BaseResponse<Car>()
-                {
-                    Descriprion = $"[GetCarByName] : {ex.Message}",
-                    StatusCode = StatusCode.InternalServerError
-                };
-            }
-        }
+        //        baseResponse.Data = car;
+        //        return baseResponse;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return new BaseResponse<Car>()
+        //        {
+        //            Descriprion = $"[GetCarByName] : {ex.Message}",
+        //            StatusCode = StatusCode.InternalServerError
+        //        };
+        //    }
+        //}
 
         public async Task<IBaseResponse<Car>> Edit(int id, CarViewModel model)
         {
@@ -162,7 +195,7 @@ namespace Automarket.Service.Implementations
                 car.Model = model.Model;
                 car.Price = model.Price;
                 car.Speed = model.Speed;
-                car.DataCreate = model.DataCreate;
+                car.DataCreate = DateTime.ParseExact(model.DataCreate, "yyyyMMdd HH:mm", null);
                 car.Name = model.Name;
 
                 await _carRepository.Update(car);
@@ -211,5 +244,7 @@ namespace Automarket.Service.Implementations
                 };
             }
         }
+
+
     }
 }

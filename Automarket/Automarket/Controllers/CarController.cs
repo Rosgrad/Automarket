@@ -48,31 +48,41 @@ namespace Automarket.Controllers
         [HttpGet]
         public async Task<IActionResult> Save(int id)
         {
-            if(id == 0)
-            {
-                return View();
-            }
+            if (id == 0) 
+                return PartialView();
 
             var response = await _carService.GetCar(id);
-            if(response.StatusCode== AutomarketDomaun.Enum.StatusCode.OK)
+            if (response.StatusCode == AutomarketDomaun.Enum.StatusCode.OK)
             {
-                return View(response.Data);
+                return PartialView(response.Data);
             }
-            return RedirectToAction("Error");
+            ModelState.AddModelError("", response.Descriprion);
+            return PartialView();
         }
+
+        // string Name, string Model, double Speed, string Description, decimal Price, string TypeCar, IFormFile Avatar
         [HttpPost]
         public async Task<IActionResult> Save(CarViewModel model)
         {
-            if(ModelState.IsValid)
+            ModelState.Remove("DateCreate");
+            if (ModelState.IsValid)
             {
                 if (model.Id == 0)
                 {
-                    await _carService.CreateCar(model);
+                    byte[] imageData;
+                    using (var binaryReader = new BinaryReader(model.Avatar.OpenReadStream()))
+                    {
+                        imageData = binaryReader.ReadBytes((int)model.Avatar.Length);
+                    }
+                    await _carService.CreateCar(model, imageData);
                 }
                 else
+                {
                     await _carService.Edit(model.Id, model);
+                }
+                return RedirectToAction("GetCars");   
             }
-            return RedirectToAction("GetCars");
+            return View();
         }
     }
 

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DvbyLH7M7okm7vCPYhkWmhOvQfSDFUHN7HJUu0lCbzd+isg7RE+6nJIUHpCub5d7SAkRthWpqkYIxUnh+mJyRQ==",
+  "dgSpecHash": "KAlTshkdaIx/JoSCO3lFCTzlJHL/4+/7YUxgPZb3iiLWo0hLCZJ7p3psw9mkyL1A9osoh7a5Eqe75w4O0BqHrg==",
   "success": true,
-  "projectFilePath": "E:\\PR\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj",
+  "projectFilePath": "E:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Амир\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Амир\\.nuget\\packages\\google.protobuf\\3.19.4\\google.protobuf.3.19.4.nupkg.sha512",
