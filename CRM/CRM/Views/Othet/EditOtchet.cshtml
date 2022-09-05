@@ -1,0 +1,61 @@
+﻿@model CRM.Models.Othet
+@{
+    ViewBag.Title = "EditOtchet";
+}
+
+<h2>Edit Product</h2>
+
+@using (Html.BeginForm("EditOtchet", "Othet", FormMethod.Post))
+{
+    <fieldset>
+        <label for="Id">Id Target</label>
+        <br />
+        @Html.EditorFor(model => model.Id)
+        <br />
+        <br />
+        <label for="timestart">Дата1</label>
+        <br />
+        <input type="date" data-val="true" name="time" value="">
+        <br />
+        <br />
+        <label for="task">Табель</label>
+        <br />
+        @Html.EditorFor(model => model.Tabn)
+        <br />
+        <br />
+        <label for="executor">Номер операции</label>
+        <br />
+        @Html.EditorFor(model => model.Nomer_oper)
+        <br />
+        <br />
+        <label for="timecom">Касса</label>
+        <br />
+        @Html.EditorFor(model => model.IdKass)
+        <br />
+        <br />
+        <label for="fine">Приход</label>
+        <br />
+        @Html.EditorFor(model => model.Prixod)
+        <br />
+        <br />
+        <label for="fine">Расход</label>
+        <br />
+        @Html.EditorFor(model => model.Rasxod)
+        <br />
+        <br />
+        <label for="fine">Коментарий</label>
+        <br />
+        @Html.EditorFor(model => model.Comment)
+        <br />
+        <br />
+        <label for="timeend">Дата2</label>
+        <br />
+        <input type="date" data-val="true" name="timew" value="">
+        <br />
+        <br />
+        <p>
+            <input type="submit" value="Редактировать" />
+        </p>
+
+    </fieldset>
+}

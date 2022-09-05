@@ -1,0 +1,51 @@
+﻿@model CRM.Models.Target
+@{
+    ViewBag.Title = "CreateTagret";
+}
+
+<h2>Create Tagret</h2>
+
+@using (Html.BeginForm())
+{
+    <label for="Id">Id Target</label>
+    <br />
+    @Html.EditorFor(model => model.Id)
+    <br />
+    <br />
+    <label for="task">Задание</label>
+    <br />
+    @Html.EditorFor(model => model.task)
+    <br />
+    <br />
+    <label for="executor">Исполнитель</label>
+    <br />
+    @Html.EditorFor(model => model.executor)
+    <br />
+    <br />
+    <label for="timestart">Дата назначения</label>
+    <br />
+    <input type="date" data-val="true" name="timestart" value="">
+    <br />
+    <br />
+    <label for="timecom">Срок исполнения</label>
+    <br />
+    @Html.EditorFor(model => model.timecom)
+    <br />
+    <br />
+    <label for="fine">Штраф</label>
+    <br />
+    @Html.EditorFor(model => model.fine)
+    <br />
+    <br />
+    <label for="timeend">Дата исполнения</label>
+    <br />
+    <input  type="date" name="timeend">
+    <br />
+    <br />
+    <input  type="submit" value="Add" />
+
+
+
+
+}
+

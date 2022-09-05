@@ -17,6 +17,7 @@ namespace Automarket.Service.Implementations
         {
             _carRepository = carRepository;
         }
+
         public BaseResponse<Dictionary<int, string>> GetTypes()
         {
             try

@@ -1,0 +1,51 @@
+﻿@model CRM.Models.Target
+@{
+    ViewBag.Title = "EditProduct";
+}
+
+<h2>Edit Product</h2>
+
+@using (Html.BeginForm("EditProduct", "Home", FormMethod.Post))
+{
+<fieldset>
+    <label for="Id">Id Target</label>
+    <br />
+    @Html.EditorFor(model => model.Id)
+    <br />
+    <br />
+    <label for="task">Задание</label>
+    <br />
+    @Html.EditorFor(model => model.task)
+    <br />
+    <br />
+    <label for="executor">Исполнитель</label>
+    <br />
+    @Html.EditorFor(model => model.executor)
+    <br />
+    <br />
+    <label for="timestart">Дата назначения</label>
+    <br />
+    <input type="date" data-val="true" name="timestart" value="">
+    <br />
+    <br />
+    <label for="timecom">Срок исполнения</label>
+    <br />
+    @Html.EditorFor(model => model.timecom)
+    <br />
+    <br />
+    <label for="fine">Штраф</label>
+    <br />
+    @Html.EditorFor(model => model.fine)
+    <br />
+    <br />
+    <label for="timeend">Дата исполнения</label>
+    <br />
+    <input type="date" data-val="true" name="timeend" value="">
+    <br />
+    <br />
+    <p>
+        <input type="submit" value="Редактировать" />
+    </p>
+
+</fieldset>
+}

@@ -1,0 +1,60 @@
+﻿@model List<CRM.Models.Target>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+    <a class="btn" href="/Home/CreateTagret">Добавить</a>
+    <br />
+    <br />
+    <br />
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Задание</th>
+            <th>Исполнитель</th>
+            <th>Дата назначения</th>
+            <th>Срок исполнения</th>
+            <th>Штраф</th>
+            <th>Дата Исполнения</th>
+            <th>Коментарий Исполнителя</th>
+            <th>Удалить</th>
+            <th>Редактировать</th>
+
+
+        </tr>   
+
+        @foreach (var t in Model)
+        {
+    <tr>
+        @{
+            var routeValuses = new RouteValueDictionary();
+            routeValuses.Add("Id", t.Id);
+
+            var attributes = new Dictionary<string, object>();
+            attributes.Add("Id", t.Id);
+        }
+        <td>@t.Id</td>
+        <td>@t.task</td>
+        <td>@t.executor</td>
+        <td>@t.timestart</td>
+        <td>@t.timecom</td>
+        <td>@t.fine</td>
+        <td>@t.timeend</td>
+        <td>@t.coment</td>
+        <td><button>@Html.ActionLink("Удалить", "DeleleTarget", "Home", routeValuses, attributes)</button></td>
+        <td><button>@Html.ActionLink("Редактировать", "EditProduct", "Home", routeValuses, attributes)</button></td>
+
+    </tr>
+
+
+        }
+
+
+
+    </table>
+</div>
+
+

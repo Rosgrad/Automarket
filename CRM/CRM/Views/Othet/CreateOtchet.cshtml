@@ -1,0 +1,44 @@
+﻿@model CRM.Models.Othet
+@{
+    ViewBag.Title = "CreateOtchet";
+}
+
+<h2>CreateOtchet</h2>
+
+
+@using (Html.BeginForm())
+{
+    <label for="task">Табель</label>
+    <br />
+    @Html.EditorFor(model => model.Tabn)
+    <br />
+    <br />
+    <label for="executor">Операция</label>
+    <br />
+    @Html.EditorFor(model => model.Nomer_oper)
+    <br />
+    <br />
+    <label for="executor">Касса</label>
+    <br />
+    @Html.EditorFor(model => model.IdKass)
+    <br />
+    <br />
+    <label for="timecom">Приход</label>
+    <br />
+    @Html.EditorFor(model => model.Prixod)
+    <br />
+    <br />
+    <label for="fine">Расход</label>
+    <br />
+    @Html.EditorFor(model => model.Rasxod)
+    <br />
+    <br />
+    <label for="fine">Подразделение</label>
+    <br />
+    @Html.EditorFor(model => model.Id_podr)
+    <br />
+    <br />
+    <input type="submit" value="Add" />
+
+
+}

@@ -1,0 +1,81 @@
+﻿@model  IEnumerable<CRM.Models.Othet>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<br />
+<form>
+</form>
+
+   <a class="btn" href="/Othet/CreateOtchet">Добавить</a>
+    <br />
+    <br />
+    <form method="get">
+        <div class="form-inline">
+            <label class="control-label">Время: </label>
+
+            <input type="date" name="Timew" />
+            <br />
+            <br />
+            <div>
+
+
+            </div>
+
+            <input type="submit" value="Фильтр" class="btn btn-default" />
+        </div>
+    </form>
+    <br />
+    <table class="table" border="1">
+        <tr>
+            <th>ID</th>
+            <th>Время</th>
+            <th>Табель</th>
+            <th>Номер операции</th>
+            <th>Касса</th>
+            <th>Приход</th>
+            <th>Расход</th>
+            <th>Коментарий</th>
+            <th>Время2</th>
+            <th>Контора2</th>
+            <th>Удалить</th>
+            <th>Редактировать</th>
+
+
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                @{
+                    var routeValuses = new RouteValueDictionary();
+                    routeValuses.Add("Id", item.Id);
+
+                    var attributes = new Dictionary<string, object>();
+                    attributes.Add("Id", item.Id);
+                }
+                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+                <td>@Html.DisplayFor(modelItem => item.Time)</td>
+                <td>@Html.DisplayFor(modelItem => item.Tabn)</td>
+                <td>@Html.DisplayFor(modelItem => item.Prixod)</td>
+                <td>@Html.DisplayFor(modelItem => item.Rasxod)</td>
+                <td>@Html.DisplayFor(modelItem => item.Id_podr)</td>
+                <td>@Html.DisplayFor(modelItem => item.Comment)</td>
+                <td>@Html.DisplayFor(modelItem => item.Emp)</td>
+                <td>@Html.DisplayFor(modelItem => item.Timew)</td>
+                <td>@Html.DisplayFor(modelItem => item.Nomer_oper)</td>
+                <td>@Html.DisplayFor(modelItem => item.IdKass)</td>
+
+                <td><button>@Html.ActionLink("Удалить", "DeleleOtchet", "Othet", routeValuses, attributes)</button></td>
+                <td><button>@Html.ActionLink("Редактировать", "EditOtchet", "Othet", routeValuses, attributes)</button></td>
+            </tr>
+        }
+
+
+
+
+
+
+</table>
+
