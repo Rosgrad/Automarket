@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Automarket\\Automarket\\Automarket\\Automarket.csproj": {}
+    "D:\\Automarket\\Automarket\\Automarket\\Automarket.csproj": {}
   },
   "projects": {
-    "E:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj": {
+    "D:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj",
+        "projectUniqueName": "D:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj",
         "projectName": "Automarket.DAL",
-        "projectPath": "E:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj",
+        "projectPath": "D:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj",
         "packagesPath": "C:\\Users\\Амир\\.nuget\\packages\\",
-        "outputPath": "E:\\Automarket\\Automarket\\Automarket.DAL\\obj\\",
+        "outputPath": "D:\\Automarket\\Automarket\\Automarket.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Амир\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -32,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj": {
-                "projectPath": "E:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj"
+              "D:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj": {
+                "projectPath": "D:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj"
               }
             }
           }
@@ -92,25 +88,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Automarket\\Automarket\\Automarket.Servise\\Automarket.Servise.csproj": {
+    "D:\\Automarket\\Automarket\\Automarket.Servise\\Automarket.Servise.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Automarket\\Automarket\\Automarket.Servise\\Automarket.Servise.csproj",
+        "projectUniqueName": "D:\\Automarket\\Automarket\\Automarket.Servise\\Automarket.Servise.csproj",
         "projectName": "Automarket.Servise",
-        "projectPath": "E:\\Automarket\\Automarket\\Automarket.Servise\\Automarket.Servise.csproj",
+        "projectPath": "D:\\Automarket\\Automarket\\Automarket.Servise\\Automarket.Servise.csproj",
         "packagesPath": "C:\\Users\\Амир\\.nuget\\packages\\",
-        "outputPath": "E:\\Automarket\\Automarket\\Automarket.Servise\\obj\\",
+        "outputPath": "D:\\Automarket\\Automarket\\Automarket.Servise\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Амир\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -124,11 +116,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj": {
-                "projectPath": "E:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj"
+              "D:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj": {
+                "projectPath": "D:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj"
               },
-              "E:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj": {
-                "projectPath": "E:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj"
+              "D:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj": {
+                "projectPath": "D:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj"
               }
             }
           }
@@ -157,25 +149,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj": {
+    "D:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj",
+        "projectUniqueName": "D:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj",
         "projectName": "AutomarketDomaun",
-        "projectPath": "E:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj",
+        "projectPath": "D:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj",
         "packagesPath": "C:\\Users\\Амир\\.nuget\\packages\\",
-        "outputPath": "E:\\Automarket\\Automarket\\AutomarketDomaun\\obj\\",
+        "outputPath": "D:\\Automarket\\Automarket\\AutomarketDomaun\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Амир\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -249,25 +237,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\Automarket\\Automarket\\Automarket\\Automarket.csproj": {
+    "D:\\Automarket\\Automarket\\Automarket\\Automarket.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Automarket\\Automarket\\Automarket\\Automarket.csproj",
+        "projectUniqueName": "D:\\Automarket\\Automarket\\Automarket\\Automarket.csproj",
         "projectName": "Automarket",
-        "projectPath": "E:\\Automarket\\Automarket\\Automarket\\Automarket.csproj",
+        "projectPath": "D:\\Automarket\\Automarket\\Automarket\\Automarket.csproj",
         "packagesPath": "C:\\Users\\Амир\\.nuget\\packages\\",
-        "outputPath": "E:\\Automarket\\Automarket\\Automarket\\obj\\",
+        "outputPath": "D:\\Automarket\\Automarket\\Automarket\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Амир\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -281,14 +265,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj": {
-                "projectPath": "E:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj"
+              "D:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj": {
+                "projectPath": "D:\\Automarket\\Automarket\\Automarket.DAL\\Automarket.DAL.csproj"
               },
-              "E:\\Automarket\\Automarket\\Automarket.Servise\\Automarket.Servise.csproj": {
-                "projectPath": "E:\\Automarket\\Automarket\\Automarket.Servise\\Automarket.Servise.csproj"
+              "D:\\Automarket\\Automarket\\Automarket.Servise\\Automarket.Servise.csproj": {
+                "projectPath": "D:\\Automarket\\Automarket\\Automarket.Servise\\Automarket.Servise.csproj"
               },
-              "E:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj": {
-                "projectPath": "E:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj"
+              "D:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj": {
+                "projectPath": "D:\\Automarket\\Automarket\\AutomarketDomaun\\AutomarketDomaun.csproj"
               }
             }
           }
@@ -354,7 +338,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
